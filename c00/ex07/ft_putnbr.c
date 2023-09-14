@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 23:33:27 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/14 10:31:28 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/14 11:57:09 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,4 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);
 	}
-}
-
-int	main(void)
-{
-	ft_putnbr(-2147483648);
-	return (0);
 }

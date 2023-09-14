@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:22:45 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/13 21:39:27 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/14 11:54:35 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,4 @@ void	ft_print_comb2(void)
 		}
 		i++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
-	return (0);
 }
