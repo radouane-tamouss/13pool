@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:22:45 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/14 11:54:35 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:43:23 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	print_nbr(int i)
 	int	fd;
 	int	sd;
 
-	fd = i / 10 + '0';
-	sd = i % 10 + '0';
+	fd = (i / 10) + '0';
+	sd = (i % 10) + '0';
 	write (1, &fd, 1);
 	write (1, &sd, 1);
 }
@@ -37,7 +37,7 @@ void	ft_print_comb2(void)
 			print_nbr(i);
 			write(1, " ", 1);
 			print_nbr(j);
-			if (i != 98 || j != 99)
+			if (i != 98)
 				write(1, ", ", 1);
 			j++;
 		}
