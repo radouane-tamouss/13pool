@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 23:33:27 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/13 23:41:00 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/14 10:21:39 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,18 @@ void	fputchar(char i)
 
 void	put_nbr(int nb)
 {
-	if (nb < 0)
+	if (nb == -2147483648)
 	{
 		fputchar('-');
-		nb *= -1;
+		put_nbr(2);
+		put_nbr(147483648);
 	}
-	if (nb <= 10)
+	else if (nb < 0)
+	{
+		fputchar('-');
+		nb = -nb;
+	}
+	else if (nb <= 10)
 	{
 		fputchar(nb + 48);
 	}
@@ -37,6 +43,6 @@ void	put_nbr(int nb)
 
 int	main(void)
 {
-	put_nbr(-3899);
+	put_nbr(-2147483648);
 	return (0);
 }
