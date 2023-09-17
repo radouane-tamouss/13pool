@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 15:53:52 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/16 16:02:16 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/17 12:56:56 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ int	ft_strlen(char *str)
 	int	count;
 
 	i = 0;
-	count = 0;
 	while (str[i] != '\0')
 	{
 		i++;
-		count++;
 	}
+	return (0);
 }
