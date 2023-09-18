@@ -6,23 +6,11 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:24:34 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/18 22:00:21 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/18 22:02:50 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
@@ -38,5 +26,5 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		}
 		dest[i] = '\0';
 	}
-	return (i+1);
+	return (i);
 }
