@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:24:34 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/18 21:54:46 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/18 21:58:04 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		}
 		dest[i] = '\0';
 	}
-	return (src_len);
+	return (i+1);
 }
