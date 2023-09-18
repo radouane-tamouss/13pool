@@ -1,36 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 13:56:44 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/17 14:35:48 by rtamouss         ###   ########.fr       */
+/*   Created: 2023/09/18 15:24:34 by rtamouss          #+#    #+#             */
+/*   Updated: 2023/09/18 15:53:43 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_strlen(char *str)
 {
-	int	test;
+	int	i;
+	int	count;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+{
+	int	src_len;
 	int	i;
 
-	test = 1;
 	i = 0;
-	if (str[0] == '\0')
-		return (test);
-	while (str[i])
+	src_len = ft_strlen(src);
+	if (src != '\0')
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z')
-			|| (str[i] >= 'A' && str[i] <= 'Z'))
-			i++;
-		else
+		while (src[i] != '\0' && i < size - 1)
 		{
-			test = 0;
-			return (test);
+			dest[i] = src[i];
+			i++;
 		}
+		dest[i] = '\0';
 	}
-	return (test);
+	return (src_len);
 }

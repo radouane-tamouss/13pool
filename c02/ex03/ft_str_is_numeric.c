@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 13:56:44 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/17 14:35:48 by rtamouss         ###   ########.fr       */
+/*   Created: 2023/09/17 14:35:08 by rtamouss          #+#    #+#             */
+/*   Updated: 2023/09/17 14:37:15 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int	test;
 	int	i;
@@ -23,8 +21,7 @@ int	ft_str_is_alpha(char *str)
 		return (test);
 	while (str[i])
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z')
-			|| (str[i] >= 'A' && str[i] <= 'Z'))
+		if (str[i] >= '0' && str[i] <= '9')
 			i++;
 		else
 		{

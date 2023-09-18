@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 13:56:44 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/17 14:35:48 by rtamouss         ###   ########.fr       */
+/*   Created: 2023/09/17 15:55:16 by rtamouss          #+#    #+#             */
+/*   Updated: 2023/09/17 15:58:34 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_alpha(char *str)
+char	*ft_strlowcase(char *str)
 {
-	int	test;
 	int	i;
 
-	test = 1;
 	i = 0;
-	if (str[0] == '\0')
-		return (test);
 	while (str[i])
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z')
-			|| (str[i] >= 'A' && str[i] <= 'Z'))
-			i++;
-		else
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			test = 0;
-			return (test);
+			str[i] += 32;
 		}
+		i++;
 	}
-	return (test);
+	return (str);
 }
