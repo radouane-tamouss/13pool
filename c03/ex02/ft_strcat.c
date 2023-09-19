@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:58:05 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/19 19:12:28 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/19 20:58:17 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char	*ft_strcat(char *dest, char *src)
 		dst_len++;
 		i++;
 	}
+	dest[dst_len] = '\0';
 	return (dest);
 }
