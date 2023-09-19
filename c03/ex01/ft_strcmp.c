@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 15:24:34 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/19 16:01:58 by rtamouss         ###   ########.fr       */
+/*   Created: 2023/09/19 13:05:57 by rtamouss          #+#    #+#             */
+/*   Updated: 2023/09/19 13:07:54 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int	ft_strcmp(char *s1, char *s2)
 {
-	unsigned int	i;
-	unsigned int	len;
+	int	i;
 
 	i = 0;
-	len = 0;
-	if (src[0] != '\0')
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		while (src[i] != '\0' && i < size - 1)
-		{
-			dest[i] = src[i];
+		if (s1[i] == s2[i])
 			i++;
-		}
-		dest[i] = '\0';
+		else
+			break ;
 	}
-	while (src[len])
-	{
-		len ++;
-	}
-	return (len);
+	return (s1[i] - s2[i]);
 }
