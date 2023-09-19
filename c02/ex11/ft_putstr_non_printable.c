@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:11:02 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/19 11:55:17 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/19 12:01:43 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ void	ft_putchar(char c)
 void	print_hexa(char c)
 {
 	int	n;
-	int	i;
 
 	n = c;
-	i = 0;
 	ft_putchar('\\');
 	if (n / 16 < 10)
 		ft_putchar(n / 16 + 48);
