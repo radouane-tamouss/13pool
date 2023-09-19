@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:37:30 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/19 15:41:25 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/19 16:04:40 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,4 @@ char	*ft_strcapitalize(char *str)
 		i++;
 	}
 	return (str);
-}
-
-int	main(void)
-{
-	char s[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
-	printf("%s", ft_strcapitalize(s));
-	return 0;
 }
