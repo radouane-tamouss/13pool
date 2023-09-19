@@ -6,12 +6,11 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 14:49:14 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/17 15:46:34 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/19 11:58:34 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 char	*ft_strupcase(char *str)
 {
