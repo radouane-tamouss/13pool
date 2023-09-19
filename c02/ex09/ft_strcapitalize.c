@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:37:30 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/19 16:04:40 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:23:07 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,10 @@ char	*ft_strcapitalize(char *str)
 	}
 	while (str[i])
 	{
-		if ((str[i - 1] == ' ' || str[i - 1] == '-' || str[i - 1] == '+')
-			&& is_alpha(str[i]) == 1)
+		if (is_alpha(str[i]) == 0)
 			str[i] -= 32;
+		else if(str[i] >= '0' && str[i] <= '9')
+			str[i] == str[i];
 		i++;
 	}
 	return (str);
