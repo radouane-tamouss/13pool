@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:23:31 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/20 13:54:30 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/20 14:04:44 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ char	*ft_strstr(char *str, char *to_find)
 	int	j;
 
 	i = 0;
-	j = 0;
 	if (to_find[0] == '\0')
 		return (str);
 	while (str[i])
 	{
 		if (str[i] == to_find[0])
 		{
+			j = 0;
 			while (str[i + j] == to_find[j])
 			{
 				j++;
