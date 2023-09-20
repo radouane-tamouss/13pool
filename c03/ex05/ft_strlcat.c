@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:54:29 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/20 16:17:32 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/20 18:59:53 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	i = 0;
 	if (size == 0 || dstlen >= size)
 		return (ft_strlen(src));
-	while (src[i] && i < size - dstlen - 1)
+	while (src[i] && i < size - 1)
 	{
 		dest[dstlen + i] = src[i];
 		i++;
