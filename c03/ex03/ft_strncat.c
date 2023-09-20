@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:33:44 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/20 10:16:01 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/20 10:21:08 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	dst_len;
+	unsigned int	i;
+	unsigned int	dst_len;
 
 	i = 0;
 	dst_len = 0;
