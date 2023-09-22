@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:11:02 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/19 12:01:43 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/22 22:35:57 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_putstr_non_printable(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		if (str[i] >= 32 && str[i] < 127)
 			write (1, &str[i], 1);

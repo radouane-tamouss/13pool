@@ -1,46 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 15:54:29 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/21 22:20:26 by rtamouss         ###   ########.fr       */
+/*   Created: 2023/09/20 21:48:01 by rtamouss          #+#    #+#             */
+/*   Updated: 2023/09/20 21:49:40 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *c)
+void	ft_putstr(char	*str)
 {
 	int	i;
 
 	i = 0;
-	while (c[i])
-		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	dstlen;
-
-	dstlen = ft_strlen(dest);
-	i = 0;
-	if (size == 0 || dstlen >= size)
-		return (ft_strlen(src));
-	while (src[i] && i < size - 1)
+	while (str[i])
 	{
-		dest[dstlen + i] = src[i];
+		write (1, &str[i], 1);
 		i++;
 	}
-	dest[dstlen + i] = '\0';
-	return (dstlen + i);
-}
-
-int	main(void)
-{
-	return 0;
 }
