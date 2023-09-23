@@ -6,13 +6,13 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 21:45:56 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/20 21:47:13 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/23 23:37:12 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_stlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
