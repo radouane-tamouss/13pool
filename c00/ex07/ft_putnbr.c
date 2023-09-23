@@ -6,35 +6,36 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 23:33:27 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/14 17:42:40 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/23 15:28:09 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	fputchar(char i)
+void	ft_putnbr(int nbr)
 {
-	write (1, &i, 1);
-}
-
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	if (nbr == -2147483648)
 	{
-		write(1, "-2147483648", 11);
-	}
-	else if (nb < 0)
-	{
-		fputchar('-');
-		nb = -nb;
-	}
-	else if (nb < 10)
-	{
-		fputchar(nb + 48);
+		write(1, "-", 1);
+		ft_putnbr(2);
+		ft_putnbr(147483648);
 	}
 	else
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		if (nbr < 0)
+		{
+			write(1, "-", 1);
+			nbr = -nbr;
+		}
+		if (nbr < 10)
+		{
+			nbr += 48;
+			write(1, &nbr, 1);
+		}
+		else
+		{
+			ft_putnbr(nbr / 10);
+			ft_putnbr(nbr % 10);
+		}
 	}
 }
