@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:11:02 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/22 22:35:57 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/23 13:09:17 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ void	print_hexa(char c)
 	n = c;
 	ft_putchar('\\');
 	if (n / 16 < 10)
-		ft_putchar(n / 16 + 48);
+		ft_putchar(n / 16 + '0');
 	else
-		ft_putchar(n / 16 + 87);
+		ft_putchar(n / 16 + 'a' - 10);
 	if (n % 16 < 10)
-		ft_putchar(n % 16 + 48);
+		ft_putchar(n % 16 + '0');
 	else
-		ft_putchar(n % 16 + 87);
+		ft_putchar(n % 16 + 'a' - 10);
 }
 
 void	ft_putstr_non_printable(char *str)
@@ -38,10 +38,10 @@ void	ft_putstr_non_printable(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		if (str[i] >= 32 && str[i] < 127)
-			write (1, &str[i], 1);
+		if (str[i] >= 32 && str[i] <= 126)
+			ft_putchar(str[i]);
 		else
 			print_hexa(str[i]);
 		i++;
