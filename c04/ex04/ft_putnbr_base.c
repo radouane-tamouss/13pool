@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:17:45 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/24 17:00:25 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/24 20:46:24 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,29 +73,23 @@ int	ft_putnbr_base_verif(char *base)
 
 void	ft_putnbr_base(int nbr, char *base)
 {
+	long	nb;
+
+	nb = nbr;
 	if (ft_putnbr_base_verif(base) == 0)
 		return ;
-	if (nbr == -2147483648)
+	if (nb < 0)
 	{
 		write(1, "-", 1);
-		ft_putnbr_base(2, base);
-		ft_putnbr_base(147483648, base);
+		nb = -nb;
+	}
+	if (nbr < ft_strlen(base))
+	{
+		write(1, &base[nb], 1);
 	}
 	else
 	{
-		if (nbr < 0)
-		{
-			write(1, "-", 1);
-			nbr = -nbr;
-		}
-		if (nbr < ft_strlen(base))
-		{
-			write(1, &base[nbr], 1);
-		}
-		else
-		{
-			ft_putnbr_base(nbr / ft_strlen(base), base);
-			ft_putnbr_base((nbr % ft_strlen(base)), base);
-		}
+		ft_putnbr_base(nb / ft_strlen(base), base);
+		ft_putnbr_base((nb % ft_strlen(base)), base);
 	}
 }
