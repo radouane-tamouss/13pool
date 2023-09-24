@@ -6,7 +6,7 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:17:45 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/24 20:46:24 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/24 20:50:13 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	ft_putnbr_base(int nbr, char *base)
 		write(1, "-", 1);
 		nb = -nb;
 	}
-	if (nbr < ft_strlen(base))
+	if (nb < ft_strlen(base))
 	{
 		write(1, &base[nb], 1);
 	}
