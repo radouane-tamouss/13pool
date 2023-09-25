@@ -6,18 +6,22 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 00:17:19 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/25 09:47:08 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/25 10:06:27 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	swapAv(char **av, int i1, int i2) {
-    char *temp = av[i1];
-    av[i1] = av[i2];
-    av[i2] = temp;
+void	swap(char **av, int i1, int i2)
+{
+	char	*temp;
+
+	temp = av[i1];
+	av[i1] = av[i2];
+	av[i2] = temp;
 }
-void print(int ac, char **av)
+
+void	print(int ac, char **av)
 {
 	int	i;
 	int	j;
@@ -56,17 +60,17 @@ int	main(int ac, char **av)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while (i < ac - 1)
 	{
-		if(ft_strcmp(av[i], av[i+1]) > 0)
+		if (ft_strcmp(av[i], av[i + 1]) > 0)
 		{
-			swapAv(av, i, i+1);
+			swap(av, i, i + 1);
 			i = 0;
 		}
 		else
 			i++;
 	}
 	print(ac, av);
-	return 0;
+	return (0);
 }
