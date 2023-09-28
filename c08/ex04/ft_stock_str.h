@@ -1,35 +1,22 @@
-else/* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_stock_str.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 13:51:41 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/25 16:50:12 by rtamouss         ###   ########.fr       */
+/*   Created: 2023/09/27 14:48:18 by rtamouss          #+#    #+#             */
+/*   Updated: 2023/09/27 14:51:59 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_STOCK_STR_H
+# define FT_STOCK_STR_H
 
-int	ft_iterative_power(int nb, int power)
+typedef struct s_stock_str
 {
-	int	i;
-	int	r;
-
-	i = 1;
-	r = 1;
-	if (power == 0)
-		return (1);
-	else if (power < 0)
-		return (0);
-	else
-	{
-		while (i <= power)
-		{
-			r *= nb;
-			i++;
-		}
-	}
-	return (r);
-}
+	int		size;
+	char	*str;
+	char	*copy;
+}	t_stock_str;
+#endif

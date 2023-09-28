@@ -1,35 +1,22 @@
-else/* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 13:51:41 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/25 16:50:12 by rtamouss         ###   ########.fr       */
+/*   Created: 2023/09/27 00:13:10 by rtamouss          #+#    #+#             */
+/*   Updated: 2023/09/27 00:13:12 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_H
+# define FT_H
 
-int	ft_iterative_power(int nb, int power)
-{
-	int	i;
-	int	r;
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 
-	i = 1;
-	r = 1;
-	if (power == 0)
-		return (1);
-	else if (power < 0)
-		return (0);
-	else
-	{
-		while (i <= power)
-		{
-			r *= nb;
-			i++;
-		}
-	}
-	return (r);
-}
+#endif

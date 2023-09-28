@@ -1,35 +1,21 @@
-else/* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 13:51:41 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/25 16:50:12 by rtamouss         ###   ########.fr       */
+/*   Created: 2023/09/27 14:25:26 by rtamouss          #+#    #+#             */
+/*   Updated: 2023/09/27 14:34:50 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-int	ft_iterative_power(int nb, int power)
+typedef struct point
 {
-	int	i;
-	int	r;
-
-	i = 1;
-	r = 1;
-	if (power == 0)
-		return (1);
-	else if (power < 0)
-		return (0);
-	else
-	{
-		while (i <= power)
-		{
-			r *= nb;
-			i++;
-		}
-	}
-	return (r);
-}
+	int	x;
+	int	y;
+}	t_point;
+#endif
