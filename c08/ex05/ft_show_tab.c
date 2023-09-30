@@ -6,11 +6,12 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 20:02:01 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/09/28 13:04:18 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/09/30 04:45:04 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "ft_stock_str.h"
 
 void	ft_putstr(char	*str)
 {
