@@ -6,11 +6,11 @@
 #    By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/04 12:04:01 by rtamouss          #+#    #+#              #
-#    Updated: 2023/10/04 14:09:52 by rtamouss         ###   ########.fr        #
+#    Updated: 2023/10/04 14:26:03 by rtamouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = GCC
+CC = gcc
 CFLAGS = -Wall -Werror -Wextra -I./includes
 AR = ar crs #archiver
 RM = rm -rf

@@ -6,13 +6,13 @@
 /*   By: rtamouss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 23:15:19 by rtamouss          #+#    #+#             */
-/*   Updated: 2023/10/04 23:21:25 by rtamouss         ###   ########.fr       */
+/*   Updated: 2023/10/04 23:28:17 by rtamouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnbr(int nbr)
+/*void	ft_putnbr(int nbr)
 {
 	if (nbr == -2147483648)
 	{
@@ -39,7 +39,7 @@ void	ft_putnbr(int nbr)
 		}
 	}
 }
-
+*/
 void	ft_foreach(int *tab, int length, void (*f)(int))
 {
 	int	i;
@@ -47,7 +47,7 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 	i = 0;
 	while (i < length)
 	{
-		ft_putnbr(tab[i]);
+		f(tab[i]);
 		write(1, "\n", 1);
 		i++;
 	}
